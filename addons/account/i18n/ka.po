@@ -3,26 +3,28 @@
 # * account
 # 
 # Translators:
-# Martin Trigaux, 2017
 # Saba Khmaladze <skhmaladze@uglt.org>, 2018
 # Giorgi Melitauri <gmelitauri@live.com>, 2018
-# Temur, 2018
 # Dachi Darchiashvili <darcho.dd@gmail.com>, 2018
 # Nika Chikhradze <nika@globaltravel.ge>, 2018
+# Temur, 2018
+# Martin Trigaux, 2018
 # Gizo Kobakhidze <040168@gmail.com>, 2018
+# David Machakhelidze <david.machakhelidze@gmail.com>, 2018
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-26 08:44+0000\n"
-"PO-Revision-Date: 2017-05-26 08:44+0000\n"
-"Last-Translator: Gizo Kobakhidze <040168@gmail.com>, 2018\n"
+"PO-Revision-Date: 2016-09-07 09:15+0000\n"
+"Last-Translator: David Machakhelidze <david.machakhelidze@gmail.com>, 2018\n"
 "Language-Team: Georgian (https://www.transifex.com/odoo/teams/41243/ka/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Language: ka\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. module: account
 #: model:mail.template,body_html:account.email_template_edi_invoice
@@ -895,6 +897,8 @@ msgid ""
 "                        whether or not it is goods, consumables, or services.\n"
 "                        Choose how you want to create your products:"
 msgstr ""
+"Odoo პროდუქტი არის ის, რასაც თქვენ გაყიდით ან შეიძენთ,  საქონელი, წყაროები "
+"ან მომსახურება. აირჩიეთ, თუ როგორ გსურთ თქვენი პროდუქციის შექმნა"
 
 #. module: account
 #: code:addons/account/models/account_move.py:731
@@ -1204,33 +1208,33 @@ msgstr ""
 #. module: account
 #: model:ir.model,name:account.model_account_unreconcile
 msgid "Account Unreconcile"
-msgstr ""
+msgstr "ანგარიში"
 
 #. module: account
 #: model:ir.model,name:account.model_account_move_line_reconcile
 msgid "Account move line reconcile"
-msgstr ""
+msgstr "ანგარიშის გადაადგილების გზის შეთანხმება"
 
 #. module: account
 #: model:ir.model,name:account.model_account_move_line_reconcile_writeoff
 msgid "Account move line reconcile (writeoff)"
-msgstr ""
+msgstr "ანგარიშის გადაადგილების გზის შეთანხმება (ჩანაწერი)"
 
 #. module: account
 #: model:ir.model,name:account.model_account_move_reversal
 msgid "Account move reversal"
-msgstr ""
+msgstr "ანგარიშის გენერირება"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_account_account_src_id
 msgid "Account on Product"
-msgstr ""
+msgstr "პროდუქტის ანგარიში"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_template_tag_ids
 #: model:ir.model.fields,field_description:account.field_account_tax_template_tag_ids
 msgid "Account tag"
-msgstr ""
+msgstr "ანგარიშის ტეგი"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_account_id
@@ -1239,6 +1243,8 @@ msgid ""
 "Account that will be set on invoice tax lines for invoices. Leave empty to "
 "use the expense account."
 msgstr ""
+"ანგარიშზე, რომ შეიქმნება საგადასახადო ხაზები ინვოისი ფაქტურების. დატოვეთ "
+"ცარიელი, რომ გამოყენების ხარჯზე ანგარიში."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_refund_account_id
@@ -1247,11 +1253,13 @@ msgid ""
 "Account that will be set on invoice tax lines for refunds. Leave empty to "
 "use the expense account."
 msgstr ""
+"ანგარიშზე, რომ შეიქმნება საგადასახადო ხაზები ინვოისი ანაზღაურება. დატოვეთ "
+"ცარიელი, რომ გამოყენების ხარჯზე ანგარიში."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_account_account_dest_id
 msgid "Account to Use Instead"
-msgstr ""
+msgstr "ანგარიშის გამოყენება ნაცვლად ამისა"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_accounts_wizard_account_type
@@ -1278,48 +1286,48 @@ msgstr "ბუღალტერია და ფინანსები"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_wizard_multi_chart
 msgid "Accounting Application Configuration"
-msgstr ""
+msgstr "ანგარიშის კონფიგურაცია"
 
 #. module: account
 #: model:web.planner,tooltip_planner:account.planner_account
 msgid "Accounting Configuration: a step-by-step guide."
-msgstr ""
+msgstr "საბუღალტრო კონფიგურაცია: ეტაპობრივად სახელმძღვანელო."
 
 #. module: account
 #: model:ir.actions.act_window,name:account.open_account_journal_dashboard_kanban
 msgid "Accounting Dashboard"
-msgstr ""
+msgstr "ანგარიში პანელი"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_date
 #: model:ir.model.fields,field_description:account.field_account_invoice_refund_date
 msgid "Accounting Date"
-msgstr ""
+msgstr "საბუღალტრო ჩანაწერი"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_move_line_form
 msgid "Accounting Documents"
-msgstr ""
+msgstr "საბუღალტრო დოკუმენტაცია"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_partner_property_form
 msgid "Accounting Entries"
-msgstr ""
+msgstr "საბუღალტრო აღრიცხვა"
 
 #. module: account
 #: model:ir.model,name:account.model_accounting_report
 msgid "Accounting Report"
-msgstr ""
+msgstr "საბუღალტრო ანგარიში"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Accounting Settings"
-msgstr ""
+msgstr "ბუღალტრული აღრიცხვის პარამეტრები"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_partner_property_form
 msgid "Accounting-related settings are managed on"
-msgstr ""
+msgstr "ანგარიშის პარამეტრები მართვა"
 
 #. module: account
 #: selection:account.account.tag,applicability:0
@@ -1333,17 +1341,17 @@ msgstr "ანგარიშები"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_account_control_ids
 msgid "Accounts Allowed"
-msgstr ""
+msgstr "ანგარიშები დაშვებულია"
 
 #. module: account
 #: model:ir.model,name:account.model_account_fiscal_position_account
 msgid "Accounts Fiscal Position"
-msgstr ""
+msgstr "ანგარიშების ფისკალური პოზიცია"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_position_template_form
 msgid "Accounts Mapping"
-msgstr ""
+msgstr "ანგარიშების ბილინგი"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.account_tag_action
@@ -1354,7 +1362,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Activate the option in the"
-msgstr ""
+msgstr "ჩართეთ ოფცია"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_active
@@ -1405,6 +1413,11 @@ msgid "Adjustment Tax"
 msgstr "საგადასახადო რეგულირება "
 
 #. module: account
+#: model:ir.model.fields,field_description:account.field_tax_adjustments_wizard_adjustment_type
+msgid "Adjustment Type"
+msgstr ""
+
+#. module: account
 #: model:ir.ui.view,arch_db:account.view_account_tax_template_form
 #: model:ir.ui.view,arch_db:account.view_tax_form
 msgid "Advanced Options"
@@ -1424,12 +1437,12 @@ msgstr "მრჩეველი"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_tax_include_base_amount
 msgid "Affect Base of Subsequent Taxes"
-msgstr ""
+msgstr "ეფექტი მომდევნო გადასახადების ბაზაზე"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_tax_template_include_base_amount
 msgid "Affect Subsequent Taxes"
-msgstr ""
+msgstr "გავლენა მომდევნო გადასახადებზე"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_aged_balance_view
@@ -1448,6 +1461,10 @@ msgid ""
 "you request an interval of 30 days Odoo generates an analysis of creditors "
 "for the past month, past two months, and so on."
 msgstr ""
+"პარტნიორი სასტარტო ბალანსი - წარმოადგენს თქვენი დებიტების უფრო დეტალურ "
+"ანგარიშს ინტერვალით. Odoo უთვლის საკრედიტო ბალანსის ცხრილს საწყისი თარიღით. "
+"ასე რომ, თუ ითხოვთ ინტერვალი 30 დღით Odoo გამოიმუშავებს კრედიტორების ანალიზს"
+" გასული თვის განმავლობაში, ბოლო ორი თვის განმავლობაში და ა.შ."
 
 #. module: account
 #. openerp-web
@@ -1477,7 +1494,7 @@ msgstr "ყველა"
 #: model:ir.ui.view,arch_db:account.report_partnerledger
 #: model:ir.ui.view,arch_db:account.report_trialbalance
 msgid "All Entries"
-msgstr ""
+msgstr "ყველა ჩანაწერი"
 
 #. module: account
 #: selection:account.aged.trial.balance,target_move:0
@@ -2064,6 +2081,12 @@ msgstr ""
 #: model:ir.ui.view,arch_db:account.view_bank_statement_form
 #: model:ir.ui.view,arch_db:account.view_bank_statement_search
 msgid "Bank Statement"
+msgstr ""
+
+#. module: account
+#: code:addons/account/models/account_bank_statement.py:935
+#, python-format
+msgid "Bank Statement %s"
 msgstr ""
 
 #. module: account
@@ -2983,7 +3006,7 @@ msgstr "ქვეყანა"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_country_group_id
 msgid "Country Group"
-msgstr ""
+msgstr "ქვეყნების ჯგუფი"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_report_country_id
@@ -3413,6 +3436,19 @@ msgstr ""
 #. module: account
 #: selection:account.payment.term.line,option:0
 msgid "Day(s) after the invoice date"
+msgstr ""
+
+#. module: account
+#: model:res.company,overdue_msg:base.main_company
+msgid ""
+"Dear Sir/Madam,\n"
+"\n"
+"Our records indicate that some payments on your account are still due. Please find details below.\n"
+"If the amount has already been paid, please disregard this notice. Otherwise, please forward us the total amount stated below.\n"
+"If you have any queries regarding your account, Please contact us.\n"
+"\n"
+"Thank you in advance for your cooperation.\n"
+"Best Regards,"
 msgstr ""
 
 #. module: account
@@ -10007,6 +10043,14 @@ msgid ""
 msgstr ""
 
 #. module: account
+#: code:addons/account/models/company.py:118
+#, python-format
+msgid ""
+"You cannot change the currency of the company since some journal items "
+"already exist"
+msgstr ""
+
+#. module: account
 #: code:addons/account/models/account.py:180
 #, python-format
 msgid ""
@@ -10519,4 +10563,12 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_bank_statement_form
 msgid "→ Count"
+msgstr ""
+
+#. module: account
+#: code:addons/account/models/account.py:309
+#, python-format
+msgid ""
+"Currency field should only be set if the journal's currency is different "
+"from the company's. Leave the field blank to use company currency."
 msgstr ""

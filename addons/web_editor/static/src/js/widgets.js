@@ -320,8 +320,7 @@ var ImageDialog = Widget.extend({
 
         var img = this.images[0];
         if (!img) {
-            var id = this.$(".existing-attachments [data-src]:first").data('id');
-            img = _.find(this.images, function (img) { return img.id === id;});
+            return this.media;
         }
 
         var media;
@@ -391,7 +390,7 @@ var ImageDialog = Widget.extend({
             $form.find('.well > span').remove();
             $form.find('.well > div').show();
             _.each(attachments, function (record) {
-                record.src = record.url || '/web/image/' + record.id;
+                record.src = record.url || _.str.sprintf('/web/image/%s/%s', record.id, encodeURI(record.name)); // Name is added for SEO purposes
                 record.is_document = !(/gif|jpe|jpg|png/.test(record.mimetype));
             });
             if (error || !attachments.length) {
@@ -448,7 +447,7 @@ var ImageDialog = Widget.extend({
             return (r.url || r.id);
         });
         _.each(this.records, function (record) {
-            record.src = record.url || '/web/image/' + record.id;
+            record.src = record.url || _.str.sprintf('/web/image/%s/%s', record.id, encodeURI(record.name)); // Name is added for SEO purposes
             record.is_document = !(/gif|jpe|jpg|png/.test(record.mimetype));
         });
         this.display_attachments();
@@ -770,7 +769,7 @@ function createVideoNode(url, options) {
     options = options || {};
 
     // video url patterns(youtube, instagram, vimeo, dailymotion, youku)
-    var ytRegExp = /^(?:(?:https?:)?\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    var ytRegExp = /^(?:(?:https?:)?\/\/)?(?:www\.)?(?:youtu\.be\/|youtube(-nocookie)?\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((?:\w|-){11})(?:\S+)?$/;
     var ytMatch = url.match(ytRegExp);
 
     var igRegExp = /\/\/instagram.com\/p\/(.[a-zA-Z0-9]*)/;
@@ -789,10 +788,10 @@ function createVideoNode(url, options) {
     var youkuMatch = url.match(youkuRegExp);
 
     var $video = $('<iframe>');
-    if (ytMatch && ytMatch[1].length === 11) {
-        var youtubeId = ytMatch[1];
+    if (ytMatch && ytMatch[2].length === 11) {
+        var youtubeId = ytMatch[2];
         $video = $('<iframe>', {
-            src: '//www.youtube.com/embed/' + youtubeId,
+            src: '//www.youtube' + (ytMatch[1] || '') + '.com/embed/' + youtubeId,
             width: '640',
             height: '360'
         });
@@ -1023,6 +1022,8 @@ var LinkDialog = Dialog.extend({
                     if (dom.ancestor(nodes[i], dom.isImg)) {
                         this.data.images.push(dom.ancestor(nodes[i], dom.isImg));
                         text += '[IMG]';
+                    } else if (!is_link && nodes[i].nodeType === 1) {
+                        // just use text nodes from listBetween
                     } else if (!is_link && i===0) {
                         text += nodes[i].textContent.slice(so, Infinity);
                     } else if (!is_link && i===nodes.length-1) {
@@ -1128,6 +1129,7 @@ var LinkDialog = Dialog.extend({
                 this.$('input.email-address').val(match = /mailto:(.+)/.exec(href) ? match[1] : '');
             } else {
                 this.$('input.url').val(href);
+                this.$('input.window-new').closest("div").show();
             }
         }
         this.preview();
