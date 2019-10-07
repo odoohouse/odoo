@@ -6,7 +6,7 @@
 # Sorin Trifu <sorin.trifu@gmail.com>, 2017
 # Martin Trigaux, 2017
 # Iulian Cutui <iulian.cutui@gmail.com>, 2017
-# Cozmin Candea <office@terrabit.ro>, 2018
+# Cozmin Candea <office@terrabit.ro>, 2019
 # Dorin Hongu <dhongu@gmail.com>, 2019
 # 
 msgid ""
@@ -2869,7 +2869,14 @@ msgstr "Tipăriți"
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/xml/pos.xml:716
-#: code:addons/point_of_sale/static/src/xml/pos.xml:1372
+#, python-format
+msgid "Print Invoice"
+msgstr "Tipărește factura"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:719
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1375
 #, python-format
 msgid "Print Receipt"
 msgstr "Tipăriți bon"
@@ -4052,7 +4059,7 @@ msgid ""
 "register the refund."
 msgstr ""
 "Pentru a returna produs(e), este necesar să deschideți o sesiune ce va fi "
-"utilizată pentru a înregistra rambursarea. "
+"utilizată pentru a înregistra returul. "
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_search

@@ -648,7 +648,7 @@ class PaymentTransaction(models.Model):
 
             # custom create
             custom_method_name = '%s_create' % acquirer.provider
-            if hasattr(acquirer, custom_method_name):
+            if hasattr(self, custom_method_name):
                 values.update(getattr(self, custom_method_name)(values))
 
         # Default value of reference is
@@ -699,6 +699,14 @@ class PaymentTransaction(models.Model):
             reference = init_ref + 'x' + str(ref_suffix)
             ref_suffix += 1
         return reference
+
+    def _get_json_info(self):
+        self.ensure_one()
+        return {
+            'state': self.state,
+            'acquirer_reference': self.acquirer_reference,
+            'reference': self.reference,
+        }
 
     def _generate_callback_hash(self):
         self.ensure_one()
